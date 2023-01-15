@@ -14,22 +14,34 @@ function getUser(user: User) {
 getUser(seho);
 
 // 함수의 전체 타입에 사용하는 경우
-// interface SumFunction {
-//   (a: number, b: number): number;
-// }
-// let sum: SumFunction;
-// sum = function (num1: number, num2: string): number {
-//   return num1 + num2;
-// };
+interface SumFunction {
+  (a: number, b: number): number;
+}
+let sum: SumFunction;
+sum = function (num1: number, num2: number): number {
+  return num1 + num2;
+};
+console.log(sum(1, 2));
 
-// 배열의 인덱싱에 사용하는 경우
-// interface StringArray {
-//   [index: number]: string;
-// }
-// let arr: StringArray;
-// arr[0] = 'hi';
-// arr[1] = 10;
+//배열의 인덱싱에 사용하는 경우
+interface StringArray {
+  [index: number]: string;
+}
+let arr: StringArray;
+arr[0] = 'hi';
+arr[1] = 10;
 
+let arr2: Array<string>;
+arr2[0] = '1';
+
+// dictionary
+interface StringRegexDictionary {
+  [key: string]: RegExp;
+}
+let obj: StringRegexDictionary = {
+  test: /str/,
+  test2: 'str',
+};
 // 인터페이스 확장
 interface Person {
   name: string;

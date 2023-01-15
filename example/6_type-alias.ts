@@ -19,13 +19,14 @@ type Person = {
 
 function getPerson(): Person {
   // ...
+  return { name: 'gg', age: 10 };
 }
 
 // #3
 type Hero = {
   skill: string;
-}
+};
 
-const capt: Hero = { 
-  // skill: 'throwing a shield' 
-}
+const capt: Hero = {
+  // skill: 'throwing a shield'
+};
