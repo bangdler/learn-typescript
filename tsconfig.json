@@ -6,7 +6,8 @@
     "module": "es6",
     "target": "es5",
     "baseUrl": "./",
-    "lib": ["ES2015", "DOM"]
+    "lib": ["ES2015", "DOM"],
+    "strict": true,
   },
   "include": ["*.ts"],
   "exclude": ["node_modules"]
